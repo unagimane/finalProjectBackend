@@ -1,5 +1,7 @@
 package com.example.itemsAPI;
 
+import com.example.itemsAPI.repository.ItemsRepository;
+import com.example.itemsAPI.repository.entity.Items;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -9,19 +11,19 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/items")
-public class ItemController{
+public class ItemsController{
 
-    final ItemRepository itemRepository;
+    final ItemsRepository itemsRepository;
 
 
-    public ItemController(@Autowired ItemRepository itemRepository )
+    public ItemsController(@Autowired ItemsRepository itemsRepository )
     {
-        this.itemRepository = itemRepository;
+        this.itemsRepository = itemsRepository;
     }
 
     @GetMapping
     public List<Items> getItems(){
-        return itemRepository.findAll();
+        return itemsRepository.findAll();
     }
 
 
