@@ -1,5 +1,6 @@
 package com.example.itemsAPI;
 
+import com.example.itemsAPI.repository.entity.Items;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -9,5 +10,6 @@ public class ItemsApiApplication {
     public static void main(String[] args) {
         SpringApplication.run(ItemsApiApplication.class, args);
     }
+
 
 }
