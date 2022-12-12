@@ -4,4 +4,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ItemsRepository extends JpaRepository<Items, Integer>
 {
+    void delete(int itemsId);
 }
