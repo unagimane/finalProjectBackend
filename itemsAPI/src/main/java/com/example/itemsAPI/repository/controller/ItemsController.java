@@ -1,4 +1,4 @@
-package com.example.itemsAPI;
+package com.example.itemsAPI.repository.controller;
 
 import com.example.itemsAPI.repository.ItemsRepository;
 import com.example.itemsAPI.repository.entity.Items;
