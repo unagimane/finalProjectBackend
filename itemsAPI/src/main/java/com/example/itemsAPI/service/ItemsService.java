@@ -21,7 +21,7 @@ public class ItemsService
     }
 
 
-    public Items save( Items items )
+    public Items save(Optional<Items> items )
     {
         //TODO implement this method
         return itemsRepository.save(items);
