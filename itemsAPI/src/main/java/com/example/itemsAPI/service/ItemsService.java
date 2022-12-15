@@ -6,42 +6,44 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ItemsService
 {
     private final ItemsRepository itemsRepository;
 
-    public ItemsServiceMySQL(@Autowired ItemsRepository itemRepository )
+    public ItemsService(@Autowired ItemsRepository itemsRepository )
     {
-        this.itemsRepository = itemRepository;
+        this.itemsRepository = itemsRepository;
     }
 
 
     public Items save( Items items )
     {
         //TODO implement this method
-        return null;
+        return itemsRepository.save(items);
     }
 
 
     public void delete( int itemsId )
     {
         //TODO implement this method
+        itemsRepository.deleteById(itemsId);
     }
 
 
     public List<Items> all()
     {
         //TODO implement this method
-        return null;
+        return itemsRepository.findAll();
     }
 
 
-    public Items findById( int itemId )
+    public Optional<Items> findById(int itemsId )
     {
         //TODO implement this method
-        return null;
+        return itemsRepository.findById(itemsId);
     }
 }
 
