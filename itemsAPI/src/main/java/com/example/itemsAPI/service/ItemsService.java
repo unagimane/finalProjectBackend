@@ -13,7 +13,9 @@ public class ItemsService
 {
     private final ItemsRepository itemsRepository;
 
+
     public ItemsService(@Autowired ItemsRepository itemsRepository )
+
     {
         this.itemsRepository = itemsRepository;
     }
@@ -29,7 +31,9 @@ public class ItemsService
     public void delete( int itemsId )
     {
         //TODO implement this method
+
         itemsRepository.deleteById(itemsId);
+
     }
 
 
@@ -40,10 +44,12 @@ public class ItemsService
     }
 
 
+
     public Optional<Items> findById(int itemsId )
     {
         //TODO implement this method
         return itemsRepository.findById(itemsId);
+
     }
 }
 
