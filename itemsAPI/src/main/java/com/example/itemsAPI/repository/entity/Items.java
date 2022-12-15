@@ -1,5 +1,6 @@
 package com.example.itemsAPI.repository.entity;
 
+import com.example.itemsAPI.repository.controller.dto.ItemDto;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -17,6 +18,10 @@ public class Items
     private String description;
 
     private String imageUrl;
+
+    public Items(ItemDto itemDto) {
+        //TODO logic of constructor
+    }
 
     public Integer getId()
     {
