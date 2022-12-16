@@ -28,10 +28,11 @@ public class ItemsController{
         return itemsService.all();
     }
 
+    @CrossOrigin
     @PostMapping
     public Items save( @RequestBody ItemDto itemDto )
     {
-        return itemsService.save( new Items(itemDto ) );
+        return itemsService.save( new Items( itemDto ) );
     }
 
     @GetMapping("/{id}")
@@ -41,7 +42,7 @@ public class ItemsController{
 
 
     @PutMapping( "/{id}" )
-    public Items update( @RequestBody ItemDto itemDto, @PathVariable("id") Integer id )
+    public Items update( @RequestBody ItemDto itemDto, @PathVariable Integer id )
     {
         Items item = itemsService.findById(id);
         item.setName( itemDto.getName() );

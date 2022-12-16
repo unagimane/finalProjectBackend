@@ -23,6 +23,10 @@ public class Items
         //TODO logic of constructor
     }
 
+    public Items() {
+
+    }
+
     public Integer getId()
     {
         return id;

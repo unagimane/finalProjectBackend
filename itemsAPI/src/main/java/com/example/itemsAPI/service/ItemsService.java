@@ -21,7 +21,7 @@ public class ItemsService
     }
 
 
-    public Items save(Optional<Items> items )
+    public Items save(Items items )
     {
         //TODO implement this method
         return itemsRepository.save(items);
@@ -45,10 +45,17 @@ public class ItemsService
 
 
 
-    public Optional<Items> findById(int itemsId )
+    public Items findById(int itemsId )
     {
         //TODO implement this method
-        return itemsRepository.findById(itemsId);
+        Optional<Items> item = itemsRepository.findById(itemsId);
+        boolean isPresent = item.isPresent();
+        if (isPresent) {
+            return item.get();
+        } else {
+            return null;
+        }
+
 
     }
 }
